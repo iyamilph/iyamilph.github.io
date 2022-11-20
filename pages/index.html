@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayastan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+
+    <script src="./wow.min.js"></script>
+</head>
+<body>
+   <header>
+    
+        <div class="links">
+            <a href="https://github.com/iyamilph"><img src="../images/github.png" alt=""></a>
+            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"><img src="../images/gmail.png" alt=""></a>
+            <a href="https://web.telegram.org/k/"><img src="../images/telegram.png" alt=""></a>
+        </div>
+        <div class="clock">
+          <ul>
+            <li id="hours">00</li>
+            <li id="separator">:</li>
+            <li id="minutes">00</li>
+          </ul>
+        </div>
+        <div class="scroll-line"></div>
+    </header>
+    
+   <main>
+    <!-- <svg id="cursor" width="40" height="40">
+        <img src="../images/icons8-sun.svg" alt="">
+    </svg> -->
+    <svg id="cursor" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="#33363F" stroke-width="2" stroke-linecap="round"/>
+        <path d="M7.88124 15.7559C8.37391 16.1826 9.02309 16.4909 9.72265 16.6928C10.4301 16.897 11.2142 17 12 17C12.7858 17 13.5699 16.897 14.2774 16.6928C14.9769 16.4909 15.6261 16.1826 16.1188 15.7559" stroke="#33363F" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="9" cy="10" r="1.25" fill="#33363F" stroke="#33363F" stroke-width="0.5" stroke-linecap="round"/>
+        <circle cx="15" cy="10" r="1.25" fill="#33363F" stroke="#33363F" stroke-width="0.5" stroke-linecap="round"/>
+        </svg>
+    <section id="body" class="body">
+    </section>
+        <div class="side-bar">
+          
+            <ul>
+                <a href="#sec1"><li>About</li></a>
+                <a href="#sec2"><li>Skills</li></a>
+                <a href="#sec3"><li>Projects</li></a>
+                <a href="#sec4"><li>Contacts</li></a>
+            </ul>
+        </div>
+        <section id="sec1">
+            <div class="container">
+            <h1 class="introduction-title wow animate__animated animate__fadeInLeftBig">Welcome</h1>
+            <p class="introduction wow animate__animated animate__fadeInRight">Hi, My name is Bayastan, I'm beggining  front-end developer from Kyrgyzstan. <br> I started my studying last summer in Codify. And in my career, I want to do <br>  a lot of amazing projects.</p>
+            <div class="player animate__animated animate__fadeInUpBig">
+              <div class="details"> 
+                <div class="track-art"></div>
+                <div class="track-name">Track Name</div>
+                <div class="track-artist">Track Artist</div>
+              </div>
+              <div class="buttons">
+                <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+                <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
+                <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+              </div>
+              <div class="slider_container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+              </div>
+              <div class="slider_container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+              </div>
+            </div>
+            </div>
+        </section>
+        <section id="sec2">
+            <div class="container">
+                <h1 class="wow animate__animated animate__fadeInDownBig">Skills</h1>
+                <h2 class="wow animate__animated animate__fadeInUpBig">There are some of my skills.</h2>
+                <div class="HTML">
+                    <div class="progress-html progress-animation">
+                        <div class="progress-value-html"><p>HTML</p></div>
+                      </div>
+                </div>
+                <div class="css">
+                    <div class="progress-css progress-animation">
+                        <div class="progress-value-css"><p>CSS</p></div>
+                      </div>
+                </div>
+                <div class="JavaScript">
+                    <div class="progress-js progress-animation">
+                        <div class="progress-value-js"><p>JavaScript</p></div>
+                      </div>
+                </div>
+            </div>
+        </section>
+        <section id="sec3">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../images/typing.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../images/notes.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../images/whether.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+        <section id="sec4">
+          <div id="order-form" class="card-body border-top none animate__animated animate__fadeInDown">
+						<h5 class="card-title">Get into contact with me</h4>
+							<form action="https://formspree.io/f/mrgddebb" method="POST">
+								<div class="form-group">
+									<input type="text" name="User's name" class="form-control" placeholder="Name" required>
+                  <input type="number" name="Phone number" placeholder="Phone number" required>
+                  <input type="text" name="Gmail" placeholder="Gmail" required>
+								</div>
+								<button type="submit" class="btn-submit animate__animated animate__heartBeat">
+                  <span class="button_top"> Submit
+                  </span>
+                </button>
+							</form>
+					</div>
+        </section>
+  </main>
+   <footer>
+   </footer>
+   <script src="./script.js"></script>
+   <script src="js/wow.min.js"></script>
+   <script>
+      new WOW().init();
+   </script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
